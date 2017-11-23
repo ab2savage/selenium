@@ -17,7 +17,16 @@ import org.testng.xml.XmlTest;
 import com.google.inject.Injector;
 import com.google.inject.Module;
 
-public class TestNGListenerLogger implements ITestListener, ITestContext {
+public class TestNGListener implements ITestListener, ITestContext {
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 7821505679921763273L;
+	
+	public String getSuite(ITestContext context) {
+		return context.getCurrentXmlTest().getSuite().getName();
+	}
 
 	@Override
 	public Object getAttribute(String name) {
@@ -99,12 +108,6 @@ public class TestNGListenerLogger implements ITestListener, ITestContext {
 
 	@Override
 	public String getOutputDirectory() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public ISuite getSuite() {
 		// TODO Auto-generated method stub
 		return null;
 	}
@@ -215,6 +218,12 @@ public class TestNGListenerLogger implements ITestListener, ITestContext {
 	public void onFinish(ITestContext context) {
 		// TODO Auto-generated method stub
 		
+	}
+
+	@Override
+	public ISuite getSuite() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 }
