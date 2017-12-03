@@ -1,4 +1,4 @@
-package pl.lbu.selenium.googleTest;
+package pl.lnu.selenium.testRail;
 
 public class GoogleLogic {
 

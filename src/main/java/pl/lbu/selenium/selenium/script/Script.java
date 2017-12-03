@@ -16,8 +16,8 @@ public class Script {
 
 	private Driver driver;
 	private WebDriver webDriver;
-	TestRailConfig testRailConfig = new TestRailConfig(" ", "",
-			" ", " ");
+	TestRailConfig testRailConfig = new TestRailConfig("https://savage.testrail.io/", "bubolka.lukasz@gmail.com",
+			"FE1jofWVQVhGV641g5TR", "savage");
 
 	public WebDriver driver() {
 		return webDriver;
