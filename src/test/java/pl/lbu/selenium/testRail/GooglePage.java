@@ -1,4 +1,4 @@
-package pl.lnu.selenium.testRail;
+package pl.lbu.selenium.testRail;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;

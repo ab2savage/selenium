@@ -1,4 +1,4 @@
-package pl.lnu.selenium.testRail;
+package pl.lbu.selenium.testRail;
 
 import org.testng.annotations.Test;
 
