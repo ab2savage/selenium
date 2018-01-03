@@ -1,4 +1,4 @@
-package lbu.pl.selenium.cucumber;
+package pl.lbu.selenium.cucumber;
 
 import org.openqa.selenium.WebDriver;
 
