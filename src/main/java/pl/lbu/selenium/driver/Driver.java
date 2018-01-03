@@ -17,11 +17,8 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 
 import pl.lbu.selenium.properties.Property;
 
-
-
 public class Driver {
 
-	
 	private final String DRIVER_PROPERTIE = "driver";
 	private final String CONFIG_PROPERTIES = "config.properties";
 	private Property projectProperties = new Property(CONFIG_PROPERTIES);
@@ -48,12 +45,10 @@ public class Driver {
 				webDriver = setDesiredCapabilitiesForChrome();
 				break;
 			case IE:
-
 				break;
 			case FIREFOX:
 				webDriver = setDesiredCapabilitiesForFirefox();
 				break;
-
 			default:
 				webDriver = setDesiredCapabilitiesForChrome();
 				break;
@@ -67,8 +62,8 @@ public class Driver {
 	private ChromeDriver setDesiredCapabilitiesForChrome() {
 		DesiredCapabilities capabilities = DesiredCapabilities.chrome();
 		URL url = this.getClass().getResource("/chromedriver.exe");
-		ChromeDriverService service = new ChromeDriverService.Builder()
-				.usingDriverExecutable(new File(url.getPath())).usingAnyFreePort().build();
+		ChromeDriverService service = new ChromeDriverService.Builder().usingDriverExecutable(new File(url.getPath()))
+				.usingAnyFreePort().build();
 		ChromeOptions options = new ChromeOptions();
 		options.merge(capabilities);
 		return new ChromeDriver(service, options);
@@ -77,8 +72,8 @@ public class Driver {
 	private FirefoxDriver setDesiredCapabilitiesForFirefox() {
 		DesiredCapabilities firefoxCapabilities = DesiredCapabilities.firefox();
 		URL url = this.getClass().getResource("/geckodriver.exe");
-		GeckoDriverService firefoxService = new GeckoDriverService.Builder().usingDriverExecutable(new File(url.getPath()))
-				.usingAnyFreePort().build();
+		GeckoDriverService firefoxService = new GeckoDriverService.Builder()
+				.usingDriverExecutable(new File(url.getPath())).usingAnyFreePort().build();
 		FirefoxOptions firefoxOptions = new FirefoxOptions();
 		FirefoxProfile firefoxProfile = new FirefoxProfile();
 		firefoxProfile.setPreference("intl.accept_languages", LANGUAGE);
